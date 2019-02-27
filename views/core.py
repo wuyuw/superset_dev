@@ -2968,3 +2968,32 @@ def caravel(url):  # noqa
 
 
 # ---------------------------------------------------------------------
+
+
+appbuilder.add_link(
+    'Smoke',
+    label=__('Smoke'),
+    href='/smoke',
+    icon='fa-magic',
+    category='People',
+    category_label=__('People'),
+    category_icon='fa-child'
+)
+appbuilder.add_separator('People')
+
+appbuilder.add_link(
+    'Drink',
+    label=__('Drink'),
+    href='/drink',
+    icon='fa-hourglass-end',
+    category='People'
+)
+appbuilder.add_separator('People')
+
+appbuilder.add_link(
+    'Perm',
+    label=__('Perm'),
+    href='/perm',
+    icon='fa-github-alt',
+    category='People'
+)
