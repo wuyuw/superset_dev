@@ -163,6 +163,8 @@ LANGUAGES = {
     'pt': {'flag': 'pt', 'name': 'Portuguese'},
     'pt_BR': {'flag': 'br', 'name': 'Brazilian Portuguese'},
     'ru': {'flag': 'ru', 'name': 'Russian'},
+    'zh_HK': {'flag': 'hk', 'name': 'Hongkong'},
+    'af': {'flag': 'af', 'name': 'AF'},
 }
 
 # ---------------------------------------------------
