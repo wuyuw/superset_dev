@@ -761,6 +761,7 @@ class Database(Model, AuditMixinNullable, ImportMixin):
         if DB_CONNECTION_MUTATOR:
             url, params = DB_CONNECTION_MUTATOR(
                 url, params, effective_username, security_manager)
+
         return create_engine(url, **params)
 
     def get_reserved_words(self):
@@ -945,6 +946,11 @@ class Database(Model, AuditMixinNullable, ImportMixin):
             conn.password = custom_password_store(conn)
         else:
             conn.password = self.password
+
+        # mysql连接设置charset=utf8
+        if str(conn).startswith('mysql'):
+            return str(conn) + "?charset=utf8"
+
         return str(conn)
 
     @property
